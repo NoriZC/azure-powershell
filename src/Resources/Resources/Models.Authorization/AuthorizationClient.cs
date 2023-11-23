@@ -170,7 +170,7 @@ namespace Microsoft.Azure.Commands.Resources.Models.Authorization
                 Condition = parameters.Condition,
                 ConditionVersion = parameters.ConditionVersion
             };
-
+            AuthorizationManagementClient.RoleAssignments.Validate(parameters.Scope, roleAssignmentId.ToString(), createParameters);
             return AuthorizationManagementClient.RoleAssignments.Create(parameters.Scope, roleAssignmentId.ToString(), createParameters).ToPSRoleAssignment(this, ActiveDirectoryClient);
         }
 

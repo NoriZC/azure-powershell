@@ -331,7 +331,7 @@ namespace Microsoft.Azure.Commands.Resources
                 ConditionVersion = ConditionVersion,
             };
 
-            AuthorizationClient.ValidateScope(parameters.Scope, true);
+            // AuthorizationClient.ValidateScope(parameters.Scope, true);
 
             WriteObject(PoliciesClient.CreateRoleAssignment(parameters, RoleAssignmentId));
         }

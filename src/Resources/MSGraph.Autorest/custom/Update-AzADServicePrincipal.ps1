@@ -614,7 +614,7 @@ function Update-AzADServicePrincipal {
     if ($PSBoundParameters['Debug']) {
       $param['Debug'] = $PSBoundParameters['Debug']
     }
-    Update-AzADApplication @param
+    # Update-AzADApplication @param
     $appid = $param['ApplicationId']
     $param=@{'ApplicationId'=$appid}
 
